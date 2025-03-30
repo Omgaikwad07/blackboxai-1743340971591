@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.expirydatetracker.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_scan"
+            app:destination="@id/nav_scan" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_scan"
+        android:name="com.example.expirydatetracker.ScanFragment"
+        android:label="@string/scan"
+        tools:layout="@layout/fragment_scan">
+        <action
+            android:id="@+id/action_scan_to_product"
+            app:destination="@id/nav_product_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.example.expirydatetracker.AddProductFragment"
+        android:label="@string/add_product"
+        tools:layout="@layout/fragment_add_product" />
+
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.expirydatetracker.NotificationsFragment"
+        android:label="@string/notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.expirydatetracker.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_product_details"
+        android:name="com.example.expirydatetracker.ProductDetailsFragment"
+        android:label="@string/product_details"
+        tools:layout="@layout/fragment_product_details" />
+</navigation>
